@@ -1,0 +1,21 @@
+{
+  "name": "mailing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "env NODE_ENV=test npx jest --coverage=true --runInBand --detectOpenHandles",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "jest": "^25.4.0",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.3"
+  }
+}
