@@ -4,11 +4,11 @@ const { mailer } = require('./mailer');
 async function sendMail(request) {
     try {
         if (request.template) {
-            const html = await exports.createTemplate(request.content, request.template);
+            const html = await createTemplate(request.content, request.template);
             console.log(html)
             request.html = html;
         }
-        const res = await exports.mailer(request);
+        const res = await mailer(request);
         return res;
     } catch (error) {
         throw new Error(error);
