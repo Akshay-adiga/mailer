@@ -4,12 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Mails</title>
 </head>
 
-<body>
-    <div>
-        Hello {{name}}! Have a great day.
+<body style="font-family: 'Roboto', sans-serif;">
+    <div
+        style="width: 400px;height: 620px;border-radius: 10px;border: 1px solid transparent;padding: 20px;text-align: center;background-color: blanchedalmond;">
+        <div
+            style="height: 100px; object-fit: fill;width: 100px; border-radius: 50%; overflow: hidden;margin: 10px 0; justify-content: center;">
+            <img src={{imageUrl}} style="height:100%;width:100%" alt="img">
+        </div>
+        <div>
+            Hello {{name}}! Have a great day.
+        </div>
     </div>
 </body>
 

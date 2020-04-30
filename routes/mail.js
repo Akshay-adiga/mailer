@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
         resObj = {
             success: true,
             data: info,
-            message: 'Mail send successfully.'
+            message: 'Mail send successfullyaaaaa.'
         }
         res.status(200).send(resObj)
     } catch (error) {

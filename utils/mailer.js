@@ -11,7 +11,7 @@ const nodemailer = require("nodemailer");
 async function mailer(data) {
     try {
         // create reusable transporter object using the default SMTP transport
-        let transporter = nodemailer.createTransport({
+        const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
                 user: process.env.GMAIL_USER_NAME, // generated ethereal user
@@ -20,12 +20,13 @@ async function mailer(data) {
         });
 
         // send mail with defined transport object
-        let info = await transporter.sendMail({
+        const info = await transporter.sendMail({
             from: '"Akshay 👻" <foo@example.com>', // sender address
             to: data.to, // list of receivers
             subject: data.subject, // Subject line
             text: data.text ? data.text : undefined, // plain text body
-            html: data.html ? data.html : undefined // html body
+            html: data.html ? data.html : undefined, // html body
+            attachments: data.attachments && data.attachments.length ? data.attachments : undefined // attachments
         });
         return {
             success: true,
